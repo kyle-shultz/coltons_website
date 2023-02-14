@@ -1,0 +1,23 @@
+h1 {
+    font-family: Helvetica;
+    text-align:center;
+    font-size: 50px;
+  }
+  
+  #footer {
+    margin-top:5px;
+    font-family: Helvetica;
+    text-align:center;
+    font-size: 9px;
+  }
+
+  #content {
+    margin: 0px 50px;
+    border: solid gray 1px;
+    padding: 10px 20px;
+  }
+
+#nav > ul > li {
+    display:inline;
+    margin: 10px 10px;
+}
