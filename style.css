@@ -1,18 +1,26 @@
 #header-banner {
     font-family: Helvetica;
     text-align: center;
+    display: flex;
     font-size: 30px;
     width: 100%;
     min-height: 100px;
     background-color: lightgray;
     line-height: 100px;
     margin-bottom: 10px;
-    margin-left: auto; 
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-header{
+    margin:auto;
+    line-height:51px;
+    vertical-align:middle;
+    margin-left: auto;
+    margin-right: 35%;
 }
 
 #footer {
-    margin-top: 5px;
     font-family: Helvetica;
     text-align: center;
     font-size: 9px;
@@ -62,7 +70,30 @@
     line-height: 25px;
 }
 
+.register-btn {
+    width: 115px;
+    height: 25px;
+    background: #121212;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.links-btn:hover {
+    background-color: #454545;
+}
+
+.register-btn:hover {
+    background-color: #454545;
+}
+
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -80,16 +111,104 @@ body {
     color: white;
 }
 
-.container {
-    padding: 0 16px;
-
+.profile-header {
+    padding: 50px;
+    text-align: center;
 }
 
-.container::after,
-.row::after {
+.profile-appointment {
+    padding: 40px;
+}
+
+.profile-nutrition {
+    padding: 40px;
+    margin-left: auto;
+}
+
+.profile-redirect{
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 4rem;
+}
+
+.container .profile-box {
+    position: relative;
+    width: 320px;
+    background: #fff;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.container .box {
+    position: relative;
+    width: 320px;
+    background: #fff;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.container .box::before {
     content: "";
-    clear: both;
-    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2234ff;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.container .box:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.container .box h2 {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container .box:hover h2 {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(-40px);
+}
+
+.container .box h3 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+}
+
+.container .box p {
+    position: relative;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+}
+
+.container .box:hover h3,
+.container .box:hover p {
+    color: #fff;
 }
 
 .title {
@@ -119,7 +238,6 @@ body {
     width: 40%;
 }
 
-/* Style all font awesome icons */
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -128,16 +246,13 @@ body {
     text-decoration: none;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
 }
 
-/* Set a specific color for each brand */
-
 /* Facebook */
 .fa-facebook {
-  color: #3b5998;
+    color: #3b5998;
 }
 
 /* Twitter */
@@ -145,12 +260,12 @@ body {
     color: white;
 }
 
-.fa-instagram{
-  color: transparent;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 #social-icons {
@@ -158,6 +273,144 @@ body {
     flex-direction: row;
     justify-content: left;
     position: relative;
+    vertical-align: middle;
+}
+
+#services-body {
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#Testimonial-container {
+    padding: 5% 3%;
+}
+
+#Testimonial-1 {
+    background-color: var(--violet);
+    color: var(--white);
+    position: relative;
+    z-index: 0;
+}
+
+#Testimonial-2 {
+    background-color: var(--Very-grayish-blue);
+    color: var(--white);
+}
+
+#Testimonial-3 {
+    background-color: var(--white);
+    color: var(--Very-grayish-blue);
+}
+
+.flex-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    Font-size: 13px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+::selection {
+    color: #fff;
+    background: #53f0e3;
+}
+
+.wrapper {
+    width: 480px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.wrapper form {
+    margin: 40px 0;
+}
+
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+form .field .input-area {
+    height: 50px;
+    width: 80%;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+}
+
+
+.field .input-area i {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form input::placeholder {
+    color: #bfbfbf;
+    font-size: 17px;
+}
+
+form .pass-txt {
+    text-align: left;
+    margin-top: -10px;
+}
+
+
+form input[type="submit"] {
+    height: 50px;
+    margin-top: 30px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    background: black;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: gray;
+}
+
+footer{
+    margin-top: auto;
+}
+
+#profile-h2{
+    font-family: Helvetica;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     vertical-align: middle;
 }
 

@@ -2,6 +2,7 @@
   <head>
   <link rel="stylesheet" href="style.css">
     <title>Strobl Nutrition</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
   </head>
   <body>
     <?php include("header.php"); ?>
