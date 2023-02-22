@@ -23,6 +23,7 @@ body {
     font-family: Helvetica;
     text-align: center;
     display: flex;
+    flex-direction: row;
     font-size: 30px;
     width: 100%;
     min-height: 80px;
@@ -37,7 +38,8 @@ body {
 #center-header {
     line-height: 50px;
     text-align: center;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     flex-wrap: nowrap;
 }
 
@@ -92,7 +94,7 @@ body {
 
 #nav>ul>li {
     display: inline-flex;
-    margin: 10px 10px;
+    margin: 20px 20px;
 }
 
 #nav {
