@@ -8,9 +8,6 @@
 <body>
     <?php include("header.php"); ?>
     <?php require_once("nav.php"); ?>
-    <div class="about-section">
-        <h1>About Me</h1>
-    </div>
     <div class="container">
         <div class="about-box">
             <h2>Colton the Nutritionist</h2>
