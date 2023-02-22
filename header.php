@@ -5,12 +5,11 @@
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
         </link>
-</div>
-<div id="center-header">
+    </div>
+    <div id="center-header">
         <h1>Strobl Nutrition</h1>
-</div>
-        <div id="logo-container">
+    </div>
+    <div id="logo-container">
         <a href="index.php"><img src="broccoli.png" alt="logo" /></a>
-</div> 
-    
+    </div>
 </div>

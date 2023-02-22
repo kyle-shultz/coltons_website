@@ -1,9 +1,11 @@
 <html>
-  <head>
-  <link rel="stylesheet" href="style.css">
+
+<head>
+    <link rel="stylesheet" href="style.css">
     <title>Services</title>
-  </head>
-  <body id = "services-body">
+</head>
+
+<body id="services-body">
     <?php include("header.php"); ?>
     <?php require_once("nav.php"); ?>
     <div class="container">
@@ -32,6 +34,7 @@
             </p>
         </div>
     </div>
-    </body>
-    <?php include("footer.php"); ?>
+</body>
+<?php include("footer.php"); ?>
+
 </html>

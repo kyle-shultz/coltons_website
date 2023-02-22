@@ -10,22 +10,16 @@
     <?php require_once("nav.php"); ?>
     <div class="container">
         <div class="wrapper">
-            <header>Login</header>
-            <form action="profile.php">
+            <header>Trouble Logging In?</header>
+            <form action="reset.php">
+                <p>Enter your email and we'll send you a link to get you back on track!</p>
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" placeholder="Email Address">
                     </div>
                 </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                    </div>
-                </div>
-                <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Send reset link">
             </form>
-            <div class="sign-txt">Not yet member? <a href="register.php">Signup now</a></div>
         </div>
     </div>
 </body>

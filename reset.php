@@ -10,22 +10,20 @@
     <?php require_once("nav.php"); ?>
     <div class="container">
         <div class="wrapper">
-            <header>Login</header>
-            <form action="profile.php">
+            <header>Reset Password</header>
+            <form action="reset.php">
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="Email Address">
+                        <input type="text" placeholder="password">
                     </div>
                 </div>
-                <div class="field password">
+                <div class="field email">
                     <div class="input-area">
-                        <input type="password" placeholder="Password">
+                        <input type="text" placeholder="confirm password">
                     </div>
                 </div>
-                <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Reset Password">
             </form>
-            <div class="sign-txt">Not yet member? <a href="register.php">Signup now</a></div>
         </div>
     </div>
 </body>

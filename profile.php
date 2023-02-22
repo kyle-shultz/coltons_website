@@ -12,16 +12,17 @@
         <h2 id="profile-h2">Welcome Back [Client Name]!</h2>
     </div>
     <div class="container">
-    <div class="profile-box"> 
-        <p>Your next appointment is on [date]</p>
-        <a href="schedule.php"> Need to cancel or reschedule? </a>
+        <div class="profile-box">
+            <p>Your next appointment is on [date]</p>
+            <a href="schedule.php"> Need to cancel or reschedule? </a>
+        </div>
+        <div class="profile-box">
+            <p>Your weight: [client weight]</p>
+            <p>Your goal weight: [client goal weight]</p>
+            <a href="plan.php"> Your Nutrition Plan </a>
+        </div>
     </div>
-    <div class="profile-box">
-    <p>Your weight: [client weight]</p>
-    <p>Your goal weight: [client goal weight]</p>
-    <a href="plan.php"> Your Nutrition Plan </a>
-</div>
-</div>
-    </body>
-    <?php include("footer.php"); ?>
+</body>
+<?php include("footer.php"); ?>
+
 </html>
