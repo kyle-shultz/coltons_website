@@ -27,7 +27,7 @@
         </div>
         <div class="box">
             <h2>03</h2>
-            <h3>Gold</h3>
+            <h3>Gold Tier</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deserunt veniam dicta perspiciatis iste
                 deleniti facilis totam odio laboriosam at!
