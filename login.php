@@ -11,21 +11,21 @@
     <div class="container">
         <div class="wrapper">
             <header>Login</header>
-            <form action="profile.php">
+            <form method="POST" action="login_handler.php">
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="Email Address">
+                        <input type="text" id="email" name="email" placeholder="Email Address">
                     </div>
                 </div>
                 <div class="field password">
                     <div class="input-area">
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="password" name="password" placeholder="Password">
                     </div>
                 </div>
                 <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
                 <input type="submit" value="Login">
             </form>
-            <div class="sign-txt">Not yet member? <a href="register.php">Signup now</a></div>
+            <div class="sign-txt">Not yet a member? <a href="register.php">Signup now</a></div>
         </div>
     </div>
 </body>
