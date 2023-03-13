@@ -11,7 +11,7 @@
     <div class="container">
         <div class="wrapper">
             <header>Login</header>
-            <form method="POST" action="login_handler.php">
+            <form action="login_handler.php" method="POST">
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" id="email" name="email" placeholder="Email Address">
@@ -23,7 +23,14 @@
                     </div>
                 </div>
                 <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
-                <input type="submit" value="Login">
+                <br />
+                    <button class="register-btn" name ="login"> Login </button>
+                    <?php
+                        if(ISSET($_SESSION["error"])){
+                            $error = $_SESSION["error"];
+                            echo "<span>$error</span>";
+                        }
+                    ?>
             </form>
             <div class="sign-txt">Not yet a member? <a href="register.php">Signup now</a></div>
         </div>
