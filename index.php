@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <link rel="stylesheet" href="style.css">
   <title>Strobl Nutrition</title>

@@ -1,5 +1,9 @@
 <?php
 require_once 'KLogger.php';
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 class Dao{
   private $host = "us-cdbr-east-06.cleardb.net";
@@ -16,6 +20,7 @@ public function getConnection () {
 }
 
 public function addUser($firstname, $lastname, $email, $password){
+    
       $conn=$this->getConnection();
       $saveQuery = "INSERT INTO user (First_name, Last_name, email, password) VALUES (:First_name, :Last_name, :email, :password)";
       $q=$conn ->prepare($saveQuery);
@@ -26,26 +31,37 @@ public function addUser($firstname, $lastname, $email, $password){
       $q->execute();
       header("location:login.php");
       exit;
+
   }
 
 public function getUser($email, $password){
-    #Need to enter a try/catch block here
+
     $conn=$this->getConnection();
-    $getQuery = "SELECT * FROM user WHERE email= '".$email."' and password='".$password."'";
-    $result = $conn->query($getQuery)->fetchAll(PDO::FETCH_ASSOC);
-    if (count($result) > 0){
-        $_SESSION['auth'] = true;
-        $_SESSION["email"] = $_POST["email"];
-        header("location:profile.php");
-    } else {
-        $_SESSION["error"] = "Invalid email or password";
-        header("location:login.php");
-    }
+		$q=$conn->prepare("SELECT email FROM user WHERE email = :email AND password = :password");
+		$q->bindParam(":email", $email);
+		$q->bindParam(":password", $password);
+		$q->setFetchMode(PDO::FETCH_ASSOC);
+		$q->execute();
+		$result=$q->fetchAll();
+		return $result;
 }
 
 public function get_email(){
     $conn=$this->getConnection();
     $getQuery = "SELECT email FROM user WHERE id=1";
     return $conn->query($getQuery)->fetch(PDO::FETCH_ASSOC);
+}
+
+public function getName($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT First_name FROM user WHERE email= :email");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $name = $row['First_name'];
+    }
+    return $name;
 }
 }

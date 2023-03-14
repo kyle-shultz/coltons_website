@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Profile Page</title>
@@ -9,7 +8,7 @@
     <?php include("header.php"); ?>
     <?php require_once("nav.php"); ?>
     <div class="profile-header">
-        <h2 id="profile-h2">Welcome Back [Client Name]!</h2>
+        <h2 id="profile-h2">Welcome Back <?php echo $_SESSION['name'] ?>!</h2>
     </div>
     <div class="container">
         <div class="profile-box">

@@ -26,10 +26,10 @@
                 <br />
                     <button class="register-btn" name ="login"> Login </button>
                     <?php
-                        if(ISSET($_SESSION["error"])){
-                            $error = $_SESSION["error"];
-                            echo "<span>$error</span>";
-                        }
+                    #    if(ISSET($_SESSION["error"])){
+                    #        $error = $_SESSION["error"];
+                     #       echo "<span>$error</span>";
+                      #  }
                     ?>
             </form>
             <div class="sign-txt">Not yet a member? <a href="register.php">Signup now</a></div>

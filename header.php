@@ -1,3 +1,8 @@
+<?php if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+    ?>
 <div id="header-banner">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div id="social-icons">
