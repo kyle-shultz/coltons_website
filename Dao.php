@@ -2,10 +2,10 @@
 require_once 'KLogger.php';
 
 class Dao{
-  private $host = "localhost:3377";
-  private $db = "colton_website";
-  private $user = "msandbox";
-  private $pass = "boise2020";
+  private $host = "us-cdbr-east-06.cleardb.net";
+  private $db = "heroku_65df615f3f685b6";
+  private $user = "b12a0f4c90accc";
+  private $pass = "86694570";
   private $log;
 public function __construct(){
     $this ->log = new KLogger("log.txt", KLogger::INFO);
@@ -24,6 +24,8 @@ public function addUser($firstname, $lastname, $email, $password){
       $q->bindParam(":email", $email);
       $q->bindParam(":password", $password);
       $q->execute();
+      header("location:login.php");
+      exit;
   }
 
 public function getUser($email, $password){
