@@ -64,4 +64,43 @@ public function getName($email){
     }
     return $name;
 }
+
+public function getWeight($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Weight FROM user WHERE email= :email");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $weight = $row['Weight'];
+    }
+    return $weight;
+}
+
+public function getGoalWeight($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Goal_weight FROM user WHERE email= :email");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $goal_weight = $row['Goal_weight'];
+    }
+    return $goal_weight;
+}
+
+public function getAppointmentDate($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Appointment_date FROM user WHERE email= :email");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $appt_date = $row['Appointment_date'];
+    }
+    return $appt_date;
+}
 }

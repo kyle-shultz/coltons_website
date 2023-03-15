@@ -12,12 +12,12 @@
     </div>
     <div class="container">
         <div class="profile-box">
-            <p>Your next appointment is on [date]</p>
+            <p>Your next appointment is on  <?php echo $_SESSION['date'] ?></p>
             <a href="schedule.php"> Need to cancel or reschedule? </a>
         </div>
         <div class="profile-box">
-            <p>Your weight: [client weight]</p>
-            <p>Your goal weight: [client goal weight]</p>
+            <p>Your weight:  <?php echo $_SESSION['weight'] ?></p>
+            <p>Your goal weight:  <?php echo $_SESSION['goal_weight'] ?></p>
             <a href="plan.php"> Your Nutrition Plan </a>
         </div>
     </div>

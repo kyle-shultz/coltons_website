@@ -23,6 +23,9 @@ if(ISSET($_POST['login'])){
 			if($login){
 					$_SESSION['logged_in']=true;
                     $_SESSION['name'] = $dao->getName($email);
+                    $_SESSION['weight'] = $dao->getWeight($email);
+                    $_SESSION['goal_weight'] = $dao->getGoalWeight($email);
+                    $_SESSION['date'] = $dao->getAppointmentDate($email);
 					header('Location: profile.php');
 					exit;
 		}else{
