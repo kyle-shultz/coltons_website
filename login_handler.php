@@ -21,7 +21,7 @@ if(ISSET($_POST['login'])){
 
         $login=$dao->getUser($email, $password);
 			if($login){
-					$_SESSION['logged_in']=true;
+					$_SESSION['logged_in']= true;
                     $_SESSION['name'] = $dao->getName($email);
                     $_SESSION['weight'] = $dao->getWeight($email);
                     $_SESSION['goal_weight'] = $dao->getGoalWeight($email);
@@ -30,7 +30,7 @@ if(ISSET($_POST['login'])){
 					exit;
 		}else{
 					$_SESSION['messages'][]="Username or Password is incorrect.";
-					$_SESSION['logged_in']=false;
+					$_SESSION['logged_in'] = false;
 					header('Location: login.php');
 					exit;
 		}

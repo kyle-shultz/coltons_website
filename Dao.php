@@ -74,6 +74,9 @@ public function getWeight($email){
     $result = $q->fetchAll();
     foreach ($result as $row) {
         $weight = $row['Weight'];
+        if ($weight === null){
+            $weight = "[Weight]";
+        }
     }
     return $weight;
 }
@@ -87,6 +90,9 @@ public function getGoalWeight($email){
     $result = $q->fetchAll();
     foreach ($result as $row) {
         $goal_weight = $row['Goal_weight'];
+        if ($goal_weight === null){
+            $goal_weight = "[Goal Weight]";
+        }
     }
     return $goal_weight;
 }
@@ -98,8 +104,12 @@ public function getAppointmentDate($email){
     $q->setFetchMode(PDO::FETCH_ASSOC);
     $q->execute();
     $result = $q->fetchAll();
+
     foreach ($result as $row) {
         $appt_date = $row['Appointment_date'];
+        if ($appt_date === null){
+            $appt_date = "[Appointment Date]";
+        }
     }
     return $appt_date;
 }
