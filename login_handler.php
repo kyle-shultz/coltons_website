@@ -22,11 +22,6 @@ if (empty($password)){
     $isError = true;
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) and !empty($email)) {
-    $_SESSION['email_message'] = "Invalid Email format";
-    $isError = true;
-}
-
 if($isError){
     $isError = false;
     header("Location: login.php");
@@ -54,7 +49,7 @@ if(ISSET($_POST['login'])){
 					header('Location: profile.php');
 					exit;
 		}else{
-					$_SESSION['messages'][]="Username or Password is incorrect.";
+					$_SESSION['password_message'] ="Username or Password is incorrect.";
 					$_SESSION['logged_in'] = false;
 					header('Location: login.php');
 					exit;
