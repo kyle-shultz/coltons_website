@@ -22,6 +22,11 @@ if (empty($password)){
     $isError = true;
 }
 
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) and !empty($email)) {
+    $_SESSION['email_message'] = "Invalid Email format";
+    $isError = true;
+}
+
 if($isError){
     $isError = false;
     header("Location: login.php");
