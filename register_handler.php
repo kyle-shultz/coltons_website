@@ -30,6 +30,16 @@ if (empty($lastname)){
     $isError = true;
 }
 
+if(!preg_match("/^([a-zA-Z' ]+)$/",$firstname) and !empty($firstname)){
+    $_SESSION['firstname_message'] = "Invalid first name given";
+    $isError = true;
+}
+
+if(!preg_match("/^([a-zA-Z' ]+)$/",$lastname) and !empty($lastname)){
+    $_SESSION['lastname_message'] = "Invalid last name given";
+    $isError = true;
+}
+
 if($isError){
     $isError = false;
     header("Location: register.php");
