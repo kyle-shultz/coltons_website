@@ -10,6 +10,12 @@
     <?php require_once("nav.php"); ?>
     <div class="container">
         <div class="wrapper">
+        <?php
+            if(isset($_SESSION['message'])) {
+                echo "<div id='message'>" . $_SESSION['message'] . "</div>";
+                unset($_SESSION['message']);
+            }
+            ?>
             <header>Register</header>
             <form action="register_handler.php" method="POST">
                 <div class="field email">
@@ -17,20 +23,45 @@
                         <input type="text" placeholder="First Name" name="firstname">
                     </div>
                 </div>
+                <?php
+                if(isset($_SESSION['firstname_message'])) {
+                        echo "<div id='message'>" . $_SESSION['firstname_message'] . "</div>";
+                        unset($_SESSION['firstname_message']);
+                    }
+                    ?>
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" placeholder="Last Name" name="lastname">
                     </div>
                 </div>
+                <?php
+                if(isset($_SESSION['lastname_message'])) {
+                        echo "<div id='message'>" . $_SESSION['lastname_message'] . "</div>";
+                        unset($_SESSION['lastname_message']);
+                    }
+                    ?>
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" placeholder="Email" name="email">
                     </div>
                 </div>
+                <?php
+                if(isset($_SESSION['email_message'])) {
+                        echo "<div id='message'>" . $_SESSION['email_message'] . "</div>";
+                        unset($_SESSION['email_message']);
+                    }
+                    ?>
                 <div class="field email">
                     <div class="input-area">
                         <input type="password" placeholder="Password" name="password">
                     </div>
+                </div>
+                <?php
+                    if(isset($_SESSION['password_message'])) {
+                        echo "<div id='message'>" . $_SESSION['password_message'] . "</div> </br>";
+                        unset($_SESSION['password_message']);
+                    }
+                    ?>
                     <br />
                     <button class="register-btn" name ="register"> Register </button>
             </form>

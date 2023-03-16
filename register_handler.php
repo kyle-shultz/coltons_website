@@ -8,21 +8,30 @@
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $isError = false;
 
 if (empty($email)){
-    $_SESSION['message'] = "Email field cannot be empty";
-    header("Location: register.php");
-    exit();
-} else if (empty($password)){
-    $_SESSION['message'] = "Password field cannot be empty";
-    header("Location: register.php");
-    exit();
-} else if (empty($firstname)){
-    $_SESSION['message'] = "First name field cannot be empty";
-    header("Location: register.php");
-    exit();
-} else if (empty($lastname)){
-    $_SESSION['message'] = "Last name field cannot be empty";
+    $_SESSION['email_message'] = "Email field cannot be empty";
+    $isError = true;
+} 
+
+if (empty($password)){
+    $_SESSION['password_message'] = "Password field cannot be empty";
+    $isError = true;
+} 
+
+if (empty($firstname)){
+    $_SESSION['firstname_message'] = "First name field cannot be empty";
+    $isError = true;
+} 
+
+if (empty($lastname)){
+    $_SESSION['lastname_message'] = "Last name field cannot be empty";
+    $isError = true;
+}
+
+if($isError){
+    $isError = false;
     header("Location: register.php");
     exit();
 }
