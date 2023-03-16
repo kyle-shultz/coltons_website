@@ -17,20 +17,26 @@
                         <input type="text" id="email" name="email" placeholder="Email Address">
                     </div>
                 </div>
+                <?php
+                    if(isset($_SESSION['email_message'])) {
+                        echo "<div id='message'>" . $_SESSION['email_message'] . "</div>";
+                        unset($_SESSION['email_message']);
+                    }
+                    ?>
                 <div class="field password">
                     <div class="input-area">
                         <input type="password" id="password" name="password" placeholder="Password">
                     </div>
                 </div>
+                <?php
+                    if(isset($_SESSION['password_message'])) {
+                        echo "<div id='message'>" . $_SESSION['password_message'] . "</div> </br>";
+                        unset($_SESSION['password_message']);
+                    }
+                    ?>
                 <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
                 <br />
                     <button class="register-btn" name ="login"> Login </button>
-                    <?php
-                    #    if(ISSET($_SESSION["error"])){
-                    #        $error = $_SESSION["error"];
-                     #       echo "<span>$error</span>";
-                      #  }
-                    ?>
             </form>
             <div class="sign-txt">Not yet a member? <a href="register.php">Signup now</a></div>
         </div>

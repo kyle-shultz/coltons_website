@@ -8,6 +8,26 @@ require_once 'KLogger.php';
 require_once 'Dao.php';
 
 $logger = new KLogger ("log.txt" , KLogger::WARN);
+$email = $_POST["email"];
+$password = $_POST["password"];
+$isError = false;
+
+if (empty($email)){
+    $_SESSION['email_message'] = "Email field cannot be empty";
+    $isError = true;
+}
+
+if (empty($password)){
+    $_SESSION['password_message'] = "Password field cannot be empty";
+    $isError = true;
+}
+
+if($isError){
+    $isError = false;
+    header("Location: login.php");
+    exit();
+}
+
 
 if(ISSET($_POST['login'])){
     if($_POST['email'] == "colton_strobl@gmail.com"){
