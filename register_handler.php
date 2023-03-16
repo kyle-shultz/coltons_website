@@ -9,6 +9,12 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
     $isError = false;
+    // Validate password strength
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
 
 if (empty($email)){
     $_SESSION['email_message'] = "Email field cannot be empty";
@@ -42,6 +48,12 @@ if(!preg_match("/^([a-zA-Z' ]+)$/",$lastname) and !empty($lastname)){
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) and !empty($email)) {
     $_SESSION['email_message'] = "Invalid Email format";
+    $isError = true;
+}
+
+
+if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8 and !empty($password)) {
+    $_SESSION['password_message'] = "Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.";
     $isError = true;
 }
 
