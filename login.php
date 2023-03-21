@@ -14,7 +14,7 @@
             <form action="login_handler.php" method="POST">
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" id="email" name="email" placeholder="Email Address">
+                        <input type="text" id="email" value="<?php echo isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : '' ?>" name="login_email" placeholder="Email Address">
                     </div>
                 </div>
                 <?php
@@ -25,7 +25,7 @@
                     ?>
                 <div class="field password">
                     <div class="input-area">
-                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="password" id="password" value="<?php echo isset($_SESSION['password']['email']) ? $_SESSION['inputs']['password'] : '' ?>" name="password" placeholder="Password">
                     </div>
                 </div>
                 <?php

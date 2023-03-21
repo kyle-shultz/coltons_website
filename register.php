@@ -20,7 +20,7 @@
             <form action="register_handler.php" method="POST">
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="First Name" name="firstname">
+                        <input type="text" value="<?php echo isset($_SESSION['inputs']['firstname']) ? $_SESSION['inputs']['firstname'] : '' ?>" placeholder="First Name" name="firstname">
                     </div>
                 </div>
                 <?php
@@ -31,7 +31,7 @@
                     ?>
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="Last Name" name="lastname">
+                        <input type="text" value="<?php echo isset($_SESSION['inputs']['lastname']) ? $_SESSION['inputs']['lastname'] : '' ?>" placeholder="Last Name" name="lastname">
                     </div>
                 </div>
                 <?php
@@ -42,7 +42,7 @@
                     ?>
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" value="<?php echo isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : '' ?>" placeholder="Email" name="register_email">
                     </div>
                 </div>
                 <?php
@@ -53,7 +53,7 @@
                     ?>
                 <div class="field email">
                     <div class="input-area">
-                        <input type="password" placeholder="Password" name="password">
+                        <input type="password" value="<?php echo isset($_SESSION['inputs']['password']) ? $_SESSION['inputs']['password'] : '' ?>" placeholder="Password" name="password">
                     </div>
                 </div>
                 <?php

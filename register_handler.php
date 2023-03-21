@@ -6,9 +6,10 @@
     require_once 'Dao.php';
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
-    $email = $_POST["email"];
+    $email = $_POST["register_email"];
     $password = $_POST["password"];
     $isError = false;
+    $_SESSION['inputs'] = $_POST;
     // Validate password strength
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);

@@ -8,9 +8,12 @@ require_once 'KLogger.php';
 require_once 'Dao.php';
 
 $logger = new KLogger ("log.txt" , KLogger::WARN);
-$email = $_POST["email"];
+$email = $_POST["login_email"];
 $password = $_POST["password"];
 $isError = false;
+$_SESSION['inputs'] = $_POST;
+
+$logger->LogDebug("User [{$email}] attempting to log in");
 
 if (empty($email)){
     $_SESSION['email_message'] = "Email field cannot be empty";
