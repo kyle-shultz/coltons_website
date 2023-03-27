@@ -33,12 +33,12 @@ if($isError){
 
 
 if(ISSET($_POST['login'])){
-    if($_POST['email'] == "colton_strobl@gmail.com"){
+    if($_POST['login_email'] == "colton_strobl@gmail.com"){
         header("location:admin.php");
         exit;
     }
-    if($_POST['email'] != "" || $_POST['password'] != ""){
-        $email = $_POST['email'];
+    if($_POST['login_email'] != "" || $_POST['password'] != ""){
+        $email = $_POST['login_email'];
         $password = $_POST['password'];
         $dao = new Dao();
 

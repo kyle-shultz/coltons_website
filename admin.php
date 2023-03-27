@@ -34,6 +34,7 @@
                     <button class="register-btn" name ="admin-submit"> Submit </button>
             </form>
 </div>
+<a href="user_mgmt.php"> Manage Users </a>
     </div>
 </body>
 <?php include("footer.php"); ?>

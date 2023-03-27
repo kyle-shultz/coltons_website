@@ -113,4 +113,9 @@ public function getAppointmentDate($email){
     }
     return $appt_date;
 }
+
+public function getUsers () {
+    $conn = $this->getConnection();
+    return $conn->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
