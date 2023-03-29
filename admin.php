@@ -15,7 +15,7 @@
         <div class="wrapper">
             <h2>Enter Client Info</h2>
 </br>
-            <form action="register_handler.php" method="POST">
+            <form action="admin_handler.php" method="POST">
             <div class="field email">
                     <div class="input-area">
                         <input type="text" placeholder="Client Email" name="email">
@@ -31,7 +31,12 @@
                         <input type="text" placeholder="Client's Goal Weight" name="goal_weight">
                     </div>
                 </div>
-                    <button class="register-btn" name ="admin-submit"> Submit </button>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Next Appointment Date" name="appt_date">
+                    </div>
+                </div>
+                    <button class="register-btn" name ="admin"> Submit </button>
             </form>
 </div>
 <a href="user_mgmt.php"> Manage Users </a>

@@ -114,6 +114,20 @@ public function getAppointmentDate($email){
     return $appt_date;
 }
 
+public function updateUser ($email, $weight, $goal_weight, $appt_date) {
+    $conn = $this->getConnection();
+    $saveQuery =
+        "UPDATE user
+        SET weight = :weight, Goal_weight = :goal_weight, Appointment_date = :appt_date
+        WHERE email = :email;";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":email", $email);
+    $q->bindParam(":weight", $weight);
+    $q->bindParam(":goal_weight", $goal_weight);
+    $q->bindParam(":appt_date", $appt_date);
+    $q->execute();
+  }
+
 public function getUsers () {
     $conn = $this->getConnection();
     return $conn->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);

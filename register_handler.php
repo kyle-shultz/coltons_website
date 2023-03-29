@@ -68,7 +68,7 @@ if($isError){
         try{
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
-            $email = $_POST['email'];
+            $email = $_POST['register_email'];
             $password = $_POST['password'];
             
             $Dao = new Dao();
