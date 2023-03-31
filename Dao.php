@@ -128,8 +128,72 @@ public function updateUser ($email, $weight, $goal_weight, $appt_date) {
     $q->execute();
   }
 
+public function updateMacros ($email, $carbs, $protein, $fats) {
+    $conn = $this->getConnection();
+    $saveQuery =
+        "INSERT INTO macros (Carbs, Fats, Protein, User_id)
+        VALUES (:carbs, :fats, :protein, (SELECT id FROM user WHERE email = :email));";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":carbs", $carbs);
+    $q->bindParam(":fats", $fats);
+    $q->bindParam(":protein", $protein);
+    $q->bindParam(":email", $email);
+    $q->execute();
+  }
+
 public function getUsers () {
     $conn = $this->getConnection();
     return $conn->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);
   }
+
+public function getProtein($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Protein FROM macros WHERE id=(SELECT id FROM user WHERE email = :email)");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $protein = $row['Protein'];
+    }
+    return $protein;
+}
+
+public function getFats($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Fats FROM macros WHERE id=(SELECT id FROM user WHERE email = :email)");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $fats = $row['Fats'];
+    }
+    return $fats;
+}
+
+public function getCarbs($email){
+    $conn=$this->getConnection();
+    $q = $conn->prepare("SELECT Carbs FROM macros WHERE id=(SELECT id FROM user WHERE email = :email)");
+    $q->bindParam(":email", $email);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    $q->execute();
+    $result = $q->fetchAll();
+    foreach ($result as $row) {
+        $carbs = $row['Carbs'];
+    }
+    return $carbs;
+}
+
+public function resetPassword($email, $newpass){
+    $conn = $this->getConnection();
+    $saveQuery =
+        "UPDATE user
+        SET password = :newpass
+        WHERE email = :email;";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":email", $email);
+    $q->bindParam(":newpass", $newpass);
+    $q->execute();
+}
 }

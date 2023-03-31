@@ -9,6 +9,7 @@ require_once 'Dao.php';
 
 $logger = new KLogger ("log.txt" , KLogger::WARN);
 $email = $_POST["login_email"];
+$SESSION['login_email'] = $_POST['login_email'];
 $password = $_POST["password"];
 $isError = false;
 $_SESSION['inputs'] = $_POST;
@@ -49,6 +50,9 @@ if(ISSET($_POST['login'])){
                     $_SESSION['weight'] = $dao->getWeight($email);
                     $_SESSION['goal_weight'] = $dao->getGoalWeight($email);
                     $_SESSION['date'] = $dao->getAppointmentDate($email);
+                    $_SESSION['fats'] = $dao->getFats($email);
+                    $_SESSION['carbs'] = $dao->getCarbs($email);
+                    $_SESSION['protein'] = $dao->getProtein($email);
 					header('Location: profile.php');
 					exit;
 		}else{

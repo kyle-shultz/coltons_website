@@ -14,9 +14,14 @@
     <div class="container">
         <div class="profile-box">
             <h3>Your Macros</h3>
-            <li> [amount] Protein </li>
-            <li> [amount] Fats </li>
-            <li> [amount] Carbs </li>
+            <ul>
+            <h4>Protein</h4>
+            <li> <?php echo $_SESSION['protein'] . " grams per day"?> </li>
+            <h4>Fats</h4>
+            <li> <?php echo $_SESSION['fats'] . " grams per day"?> </li>
+            <h4>Carbs</h4>
+            <li> <?php echo $_SESSION['carbs'] . " grams per day"?> </li>
+</ul>
         </div>
         <div class="profile-box">
             <h3>Recommended Dishes</h3>

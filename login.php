@@ -34,7 +34,7 @@
                         unset($_SESSION['password_message']);
                     }
                     ?>
-                <div class="pass-txt"><a href="reset-link.php">Forgot password?</a></div>
+                <div class="pass-txt"><a href="reset.php">Forgot password?</a></div>
                 <br />
                     <button class="register-btn" name ="login"> Login </button>
             </form>

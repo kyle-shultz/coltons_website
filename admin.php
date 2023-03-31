@@ -18,7 +18,7 @@
             <form action="admin_handler.php" method="POST">
             <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="Client Email" name="email">
+                        <input type="text" placeholder="Client Email" name="client_email">
                     </div>
                 </div>
                 <div class="field email">
@@ -39,7 +39,34 @@
                     <button class="register-btn" name ="admin"> Submit </button>
             </form>
 </div>
-<a href="user_mgmt.php"> Manage Users </a>
+            <div class="wrapper">
+            <h2>Enter Client Macros</h2>
+            <form action="admin_handler.php" method="POST">
+            <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Client Email" name="macro_email">
+                    </div>
+                </div>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Client's Carbs" name="carbs">
+                    </div>
+                </div>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Client's Protein" name="protein">
+                    </div>
+                </div>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Client's Fats" name="fats">
+                    </div>
+                </div>
+                    <button class="register-btn" name ="admin"> Submit </button>
+            </form>
+</div>
+<a href="user_mgmt.php"> Manage Users </a>          
+</div>
     </div>
 </body>
 <?php include("footer.php"); ?>

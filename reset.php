@@ -11,18 +11,30 @@
     <div class="container">
         <div class="wrapper">
             <header>Reset Password</header>
-            <form action="reset.php">
+            <form action="reset_handler.php" method="POST">
+                <div class="field email">
+                <div class="input-area">
+                        <input type="text" placeholder="email" name="reset_email" >
+                    </div>
+</div>
+                    <div class="field email">
+                    <div class="input-area">
+                        <input type="password" placeholder="new password" name="new_password">
+                    </div>
+</div>
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" placeholder="password">
+                        <input type="password" placeholder="confirm password" name="confirm_password">
                     </div>
+                    <?php
+                    if(isset($_SESSION['password_message'])) {
+                        echo "<div id='message'>" . $_SESSION['password_message'] . "</div> </br>";
+                        unset($_SESSION['password_message']);
+                    }
+                    ?>
                 </div>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="confirm password">
-                    </div>
-                </div>
-                <input type="submit" value="Reset Password">
+                <br />
+                    <button class="register-btn" name ="reset"> Reset </button>
             </form>
         </div>
     </div>
