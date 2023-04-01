@@ -12,7 +12,7 @@ $email = $_POST["login_email"];
 $SESSION['login_email'] = $_POST['login_email'];
 $password = $_POST["password"];
 $isError = false;
-$_SESSION['inputs'] = $_POST;
+$_SESSION['login_inputs'] = $_POST;
 
 $logger->LogDebug("User [{$email}] attempting to log in");
 
@@ -23,6 +23,11 @@ if (empty($email)){
 
 if (empty($password)){
     $_SESSION['password_message'] = "Password field cannot be empty";
+    $isError = true;
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) and !empty($email)) {
+    $_SESSION['email_message'] = "Invalid Email format";
     $isError = true;
 }
 

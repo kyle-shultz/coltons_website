@@ -65,6 +65,15 @@ table tbody tr.active-row {
     font-family: Helvetica;
   }
 
+#good_message {
+    background-color: green;
+    width: 200px;
+    padding: 10 10;
+    margin: 10px;
+    color: white;
+    font-family: Helvetica;
+}  
+
 #header-banner {
     font-family: Helvetica;
     text-align: center;
