@@ -42,7 +42,7 @@
                     ?>
                 <div class="field email">
                     <div class="input-area">
-                        <input type="text" value="<?php echo isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : '' ?>" placeholder="Email" name="register_email">
+                        <input type="text" value="<?php echo isset($_SESSION['inputs']['register_email']) ? $_SESSION['inputs']['register_email'] : '' ?>" placeholder="Email" name="register_email">
                     </div>
                 </div>
                 <?php

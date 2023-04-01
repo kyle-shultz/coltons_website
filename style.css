@@ -72,7 +72,14 @@ table tbody tr.active-row {
     margin: 10px;
     color: white;
     font-family: Helvetica;
-}  
+}
+
+#bot_cent{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #header-banner {
     font-family: Helvetica;

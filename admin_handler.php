@@ -15,6 +15,7 @@
             $weight = $_POST['weight'];
             $goal_weight = $_POST['goal_weight'];
             $appt_date = $_POST['appt_date'];
+            $Dao = new Dao();
             
             if (!empty($client_email)){
                 $Dao->updateUser ($client_email, $weight, $goal_weight, $appt_date);

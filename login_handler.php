@@ -40,6 +40,7 @@ if($isError){
 
 if(ISSET($_POST['login'])){
     if($_POST['login_email'] == "colton_strobl@gmail.com"){
+        $_SESSION['logged_in']= true;
         header("location:admin.php");
         exit;
     }

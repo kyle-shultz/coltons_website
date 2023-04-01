@@ -21,6 +21,7 @@
             <a href="plan.php"> Your Nutrition Plan </a>
         </div>
     </div>
+</br>
 </body>
 <?php include("footer.php"); ?>
 

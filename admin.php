@@ -41,6 +41,7 @@
 </div>
             <div class="wrapper">
             <h2>Enter Client Macros</h2>
+            </br>
             <form action="admin_handler.php" method="POST">
             <div class="field email">
                     <div class="input-area">
