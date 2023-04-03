@@ -11,7 +11,13 @@
     <li><a href="/services.php" class="links-btn">Services</a></li>
     <?php
     if ($_SESSION['logged_in']){
-      echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+      if ($_SESSION['admin']){
+        echo "<li><a href=\"" . "/admin.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+        echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+      } else {
+        echo "<li><a href=\"" . "/profile.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+        echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+      }
     } else {
       echo "<li><a href=\"" . "/login.php\"" . "class=\"" ."links-btn\">" . "Log In/Create</a></li>";
     }

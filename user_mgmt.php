@@ -13,6 +13,5 @@ require_once 'Dao.php';
     echo Widgets::renderTable($users);
     ?>
     <div id="bot_cent">
-    <a href="admin.php"> Back to admin page </a>
 </div> 
 </html>
