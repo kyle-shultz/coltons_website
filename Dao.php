@@ -107,9 +107,6 @@ public function getAppointmentDate($email){
 
     foreach ($result as $row) {
         $appt_date = $row['Appointment_date'];
-        if ($appt_date === null){
-            $appt_date = "[Appointment Date]";
-        }
     }
     return $appt_date;
 }

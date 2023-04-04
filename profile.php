@@ -12,8 +12,13 @@
     </div>
     <div class="container">
         <div class="profile-box">
-            <p>Your next appointment is on  <?php echo $_SESSION['date'] ?></p>
-            <a href="schedule.php"> Need to cancel or reschedule? </a>
+            <p>  <?php
+            if ($_SESSION['date'] === null){
+                echo "Please call Colton Strobl at 208-876-5432 to set up your free consulting appointment!";
+            } else {
+                echo "Your next appointment is on: " . $_SESSION['date'];
+            }
+            ?></p>
         </div>
         <div class="profile-box">
             <p>Your weight:  <?php echo $_SESSION['weight'] ?></p>
