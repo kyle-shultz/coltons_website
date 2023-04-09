@@ -1,3 +1,4 @@
+<?php $thisPage = "About"; ?>
 <html>
 
 <head>

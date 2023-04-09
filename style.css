@@ -163,6 +163,11 @@ table tbody tr.active-row {
     text-align: center;
 }
 
+#nav #currentpage a {
+    background: #fff;
+    color: #333;
+}
+
 #image {
     height: 100px;
     width: 100px;

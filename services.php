@@ -1,3 +1,4 @@
+<?php $thisPage = "Services"; ?>
 <html>
 
 <head>

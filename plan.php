@@ -1,3 +1,4 @@
+<?php $thisPage = "Plan"; ?>
 <html>
 
 <head>

@@ -1,3 +1,5 @@
+<?php $thisPage = "Home"; ?>
+
 <html>
 <head>
   <link rel="stylesheet" href="style.css">

@@ -1,3 +1,4 @@
+<?php $thisPage = "Testimonials"; ?>
 <html>
 
 <head>

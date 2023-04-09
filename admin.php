@@ -1,3 +1,4 @@
+<?php $thisPage = "Admin"; ?>
 <html>
 
 <head>

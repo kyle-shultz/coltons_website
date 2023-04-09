@@ -5,18 +5,32 @@
     ?>
 <div id="nav">
   <ul>
-    <li><a href="/index.php" class="links-btn">Home</a></li>
-    <li><a href="/about.php" class="links-btn">About</a></li>
-    <li><a href="/testimonials.php" class="links-btn">Testimonials</a></li>
-    <li><a href="/services.php" class="links-btn">Services</a></li>
+    <li<?php if ($thisPage=="Home") 
+    echo " id=\"currentpage\""; ?>><a href="/index.php" class="links-btn">Home</a></li>
+    <li<?php if ($thisPage=="About") 
+    echo " id=\"currentpage\""; ?>><a href="/about.php" class="links-btn">About</a></li>
+    <li <?php if ($thisPage=="Testimonials") 
+    echo " id=\"currentpage\""; ?>><a href="/testimonials.php" class="links-btn">Testimonials</a></li>
+    <li <?php if ($thisPage=="Services") 
+    echo " id=\"currentpage\""; ?>><a href="/services.php" class="links-btn">Services</a></li>
     <?php
     if ($_SESSION['logged_in']){
       if ($_SESSION['admin']){
-        echo "<li><a href=\"" . "/admin.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
-        echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        if ($thisPage == "Admin"){
+          echo "<li id=\"currentpage\"><a href=\"" . "/admin.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+          echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        } else {
+          echo "<li><a href=\"" . "/admin.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+          echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        }
       } else {
-        echo "<li><a href=\"" . "/profile.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
-        echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        if ($thisPage == "Profile"){
+          echo "<li id=\"currentpage\"><a href=\"" . "/profile.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+          echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        } else {
+          echo "<li><a href=\"" . "/profile.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
+          echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
+        }
       }
     } else {
       echo "<li><a href=\"" . "/login.php\"" . "class=\"" ."links-btn\">" . "Log In/Create</a></li>";

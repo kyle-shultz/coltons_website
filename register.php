@@ -1,3 +1,4 @@
+<?php $thisPage = "Login"; ?>
 <html>
 
 <head>

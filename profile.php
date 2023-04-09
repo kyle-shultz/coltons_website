@@ -1,3 +1,4 @@
+<?php $thisPage = "Profile"; ?>
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
