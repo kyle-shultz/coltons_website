@@ -1,6 +1,4 @@
 $(function (){
-    var $registerForm = $("#register");
-
     $.validator.addMethod("noSpace", function(value, element){
         return value == '' || value.trim().length != 0;
     }, "Spaces are not allowed. Please enter a valid name!");
@@ -10,12 +8,13 @@ $(function (){
         return  re.test(value);
      }); 
 
-    if ($registerForm.length){
-        $registerForm.validate({
+     var $registerForm = $("#register_form");
+     $registerForm.submit(function (e){
+            e.preventDefault();
+     }).validate({
             rules:{
                 firstname:{
                     required: true,
-                    lettersonly: true,
                     noSpace: true
                 },
                 lastname:{
@@ -24,7 +23,6 @@ $(function (){
                 },
                 register_email:{
                     required: true,
-                    lettersonly: true,
                     email: true
                 },
                 password:{
@@ -32,14 +30,12 @@ $(function (){
                     pwcheck: true
                 }
             },
-            messages: {
+            messages:{
                 firstname:{
                     required: 'First name is required.',
-                    lettersonly: 'First name can only contain letters.'
                 },
                 lastname:{
                     required: 'Last name is required.',
-                    lettersonly: 'Last name can only contain letters.'
                 },
                 register_email:{
                     required: 'Email is required.',
@@ -49,7 +45,18 @@ $(function (){
                     required: 'Password is required.',
                     pwcheck: 'Password should be at least 8 characters in length include one upper case letter, one number, and one special character.' 
                 }
+            },
+            submitHandler: function(form){
+                form.submit();
             }
-        })
-    }
-})
+        });
+
+        // $registerForm.submit(function (e){
+        
+        //     if ($registerForm.valid()){
+        //         window.location.replace("register_handler.php")
+        //     } else {
+        //         e.preventDefault();
+        //     }
+        // });
+});
