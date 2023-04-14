@@ -31,9 +31,6 @@
             <li> [meal] Dinner</li>
         </div>
     </div>
-    <div class="profile-redirect">
-        <a href="profile.php"> Go back to your profile. </a>
-    </div>
 </body>
 <?php include("footer.php"); ?>
 
