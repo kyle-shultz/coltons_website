@@ -1,3 +1,4 @@
+<?php $thisPage = "user_mgmt"; ?>
 <html>
 <head>
     <link rel="stylesheet" href="style.css">

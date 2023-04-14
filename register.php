@@ -18,7 +18,8 @@
             }
             ?>
             <header>Register</header>
-            <form action="register_handler.php" method="POST">
+            <!-- action="register_handler.php" method="POST" -->
+            <form  id ="register">
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" value="<?php echo isset($_SESSION['inputs']['firstname']) ? $_SESSION['inputs']['firstname'] : '' ?>" placeholder="First Name" name="firstname">
@@ -64,11 +65,15 @@
                     }
                     ?>
                     <br />
-                    <button class="register-btn" name ="register"> Register </button>
+                    <button class="register-btn" id = "register_btn" name ="register"> Register </button>
             </form>
         </div>
     </div>
-    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/register.js"></script>
 </body>
 <?php include("footer.php"); ?>
 

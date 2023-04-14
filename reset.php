@@ -1,3 +1,4 @@
+<?php $thisPage = "Reset"; ?>
 <html>
 
 <head>
