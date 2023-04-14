@@ -33,7 +33,11 @@
         }
       }
     } else {
-      echo "<li><a href=\"" . "/login.php\"" . "class=\"" ."links-btn\">" . "Log In/Create</a></li>";
+      if ($thisPage=="Login"){
+        echo "<li id=\"currentpage\"><a href=\"" . "/login.php\"" . "class=\"" ."links-btn\">" . "Log In/Create</a></li>";
+      } else {
+        echo "<li ><a href=\"" . "/login.php\"" . "class=\"" ."links-btn\">" . "Log In/Create</a></li>";
+      }
     }
     ?>
   </ul>
