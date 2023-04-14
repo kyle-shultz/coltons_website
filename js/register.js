@@ -50,13 +50,4 @@ $(function (){
                 form.submit();
             }
         });
-
-        // $registerForm.submit(function (e){
-        
-        //     if ($registerForm.valid()){
-        //         window.location.replace("register_handler.php")
-        //     } else {
-        //         e.preventDefault();
-        //     }
-        // });
 });

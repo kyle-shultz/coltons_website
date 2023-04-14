@@ -13,7 +13,7 @@
         <div class="wrapper">
             <header>Register</header>
             <!-- action="register_handler.php" method="POST" -->
-            <form  id = "register_form">
+            <form  id = "register_form" action="register_handler.php" method="POST">
                 <div class="field email">
                     <div class="input-area">
                         <input type="text" placeholder="First Name" name="firstname">

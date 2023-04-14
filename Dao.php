@@ -31,7 +31,6 @@ public function addUser($firstname, $lastname, $email, $password){
       $q->execute();
       header("location:login.php");
       exit;
-
   }
 
 public function getUser($email, $password){
