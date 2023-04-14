@@ -14,8 +14,8 @@
     <li <?php if ($thisPage=="Services") 
     echo " id=\"currentpage\""; ?>><a href="/services.php" class="links-btn">Services</a></li>
     <?php
-    if ($_SESSION['logged_in']){
-      if ($_SESSION['admin']){
+    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+      if (isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         if ($thisPage == "Admin"){
           echo "<li id=\"currentpage\"><a href=\"" . "/admin.php\"" . "class=\"" ."links-btn\">" . "Back to Profile</a></li>";
           echo "<li><a href=\"" . "/logout.php\"" . "class=\"" ."links-btn\">" . "Log Out</a></li>";
