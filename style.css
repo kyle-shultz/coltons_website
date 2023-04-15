@@ -74,6 +74,11 @@ table tbody tr.active-row {
     font-family: Helvetica;
   }
 
+#profile-text{
+    font-family: "Heebo";
+    font-size: 25px;
+}
+
 #good_message {
     background-color: green;
     width: 200px;
@@ -107,6 +112,7 @@ table tbody tr.active-row {
 }
 
 #center-header {
+    font-family: "Lora";
     line-height: 50px;
     text-align: center;
     margin-right: auto;
@@ -200,6 +206,19 @@ table tbody tr.active-row {
     line-height: 25px;
 }
 
+#profile-btn {
+    display: block;
+    width: 115px;
+    height: 50px;
+    background: #323232;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
 #home-container{
     display: flex;
     flex-direction: row;
@@ -263,6 +282,22 @@ table tbody tr.active-row {
     margin-top: 50px;
 }
 
+#profile-header-3{
+    color: white;
+    font-family: "Heebo";
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+}
+
+#profile-header-4{
+    color: white;
+    font-family: "Heebo";
+    font-size: 25px;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -273,7 +308,8 @@ table tbody tr.active-row {
 .container .profile-box {
     position: relative;
     width: 320px;
-    background: #fff;
+    background-color: #323232;
+    color: white;
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
 }
@@ -547,9 +583,9 @@ footer {
 }
 
 #profile-h2 {
-    font-family: Helvetica;
+    font-family: "Lora";
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
