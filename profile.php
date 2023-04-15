@@ -13,7 +13,7 @@
         <h2 id="profile-h2">Welcome Back <?php echo $_SESSION['name'] ?>!</h2>
     <div class="container">
         <div class="profile-box">
-            <h3 id="profile-header-3"> Appointment Date </h3>
+            <h3 id="about-header-3"> Appointment Date </h3>
             </br>
             </br>
             <p id="profile-text">  <?php

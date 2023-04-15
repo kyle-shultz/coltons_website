@@ -13,26 +13,26 @@
         <div class="box">
             <h2>01</h2>
             <h3>Bronze Tier</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit officia magni dolorem sunt deserunt laborum
-                inventore id aspernatur quibusdam ratione?
-            </p>
+            <p> Free Consulting Appointment</p>
+            <p> Custom Nutrition Plan </p>
+            <p> Monthly Appointment </p>
         </div>
-        <div class="box">
+        <div class="box-2">
             <h2>02</h2>
             <h3>Silver Tier</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum, rem omnis unde reprehenderit eos
-                autem quod distinctio optio obcaecati.
-            </p>
+            <p> Free Consulting Appointment</p>
+            <p> Custom Nutrition Plan </p>
+            <p> Workout plan </p>
+            <p> Monthly Appointment </p>
         </div>
-        <div class="box">
+        <div class="box-3">
             <h2>03</h2>
             <h3>Gold Tier</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deserunt veniam dicta perspiciatis iste
-                deleniti facilis totam odio laboriosam at!
-            </p>
+            <p> Free Consulting Appointment</p>
+            <p> Custom Nutrition Plan </p>
+            <p> Workout plan </p>
+            <p> Fitness Coaching </p>
+            <p> Weekly Appointment </p>
         </div>
     </div>
 </body>

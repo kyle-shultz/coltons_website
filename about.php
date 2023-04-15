@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
     <title>About</title>
 </head>
 
@@ -21,3 +23,4 @@
     </div>
 </body>
 <?php include("footer.php"); ?>
+</html>

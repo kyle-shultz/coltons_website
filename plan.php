@@ -3,7 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>Schedule</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+    <title>Nutrition Plan</title>
 </head>
 
 <body>
