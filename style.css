@@ -286,11 +286,17 @@ table tbody tr.active-row {
     color: white;
     font-family: "Heebo";
     font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+}
+
+#about-header-3{
+    color: white;
+    font-family: "Heebo";
+    font-size: 30px;
+    position: relative;
+    bottom: 60px;
     text-align: center;
 }
+
 
 #profile-header-4{
     color: white;
@@ -409,9 +415,9 @@ table tbody tr.active-row {
 
 #centered-image {
     display: block;
+    object-fit: contain;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
 }
 
 .fa {
