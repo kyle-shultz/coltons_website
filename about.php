@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
     <title>About</title>
 </head>
 
@@ -10,14 +12,15 @@
     <?php include("header.php"); ?>
     <?php require_once("nav.php"); ?>
     <div class="container">
-        <div class="about-box">
-            <h2>Colton the Nutritionist</h2>
+        <div class="profile-box">
+            <h2 id="about-header-3">Colton the Nutritionist</h2>
             <img src="colton.jpg" alt="Colton" id="centered-image">
+            <p id="profile-text">Some text that describes Colton the million year old nutritionist</p>
             <h2>Contact Information</h2>
-            <p>Some text that describes Colton the million year old nutritionist</p>
-            <p>colton@example.com</p>
-            <p><button class="contact-btn">Contact</button></p>
+            <p id="profile-text">colton@example.com</p>
+            <p id="profile-text"><button class="contact-btn">Contact</button></p>
         </div>
     </div>
 </body>
 <?php include("footer.php"); ?>
+</html>

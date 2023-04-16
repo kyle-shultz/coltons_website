@@ -9,9 +9,7 @@
 <body>
     <?php include("header.php"); ?>
     <?php require_once("nav.php"); ?>
-    <div class="profile-header">
         <h2 id="profile-h2">Hello Colton!</h2>
-    </div>
     <div class="container">
         <div class="wrapper">
             <h2>Enter Client Info</h2>
