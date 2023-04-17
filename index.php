@@ -12,16 +12,16 @@
   <?php require_once("nav.php"); ?>
       <div id="home-container">
         <div id="content">
-      <p>Do you want to lose weight and a lead a healthier lifestyle? Do you find that you don't have the time to make
+      <p id="home-text">Do you want to lose weight and a lead a healthier lifestyle? Do you find that you don't have the time to make
         big changes? Have you tried losing weight before and quit?
         I am here to help you start that journey and get you headed in the right direction.
       </p>
-      <img src="https://via.placeholder.com/150" alt="logo" />
-</div>
+      <img id= "home-photo" src="istockphoto-628504820-2048x2048.jpg" alt="logo" />
+    </div>
 <div id="content-right">
-<p>I have years of experiece of helping clients achieve their dreams! It is my passion to help guide people to
+      <img id= "home-photo" src="istockphoto-621598372-2048x2048.jpg" alt="logo" />
+      <p id="home-text">I have years of experiece of helping clients achieve their dreams! It is my passion to help guide people to
         leading happier and healthier lives!</p>
-      <img src="https://via.placeholder.com/150" alt="logo" />
 </div>
 </div>
 </body>
