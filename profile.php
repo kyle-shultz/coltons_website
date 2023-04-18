@@ -1,4 +1,9 @@
-<?php $thisPage = "Profile"; ?>
+<?php $thisPage = "Profile"; 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
@@ -25,7 +30,7 @@
             ?></p>
         </div>
         <div class="profile-box">
-            <h3 id="profile-header-3"> Weight Tracker </h3>
+            <h3 id="about-header-3"> Weight Tracker </h3>
             </br>
             </br>
             <p id="profile-text">Your weight:  <?php echo $_SESSION['weight'] ?></p>
